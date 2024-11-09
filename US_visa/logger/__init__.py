@@ -13,6 +13,6 @@ os.makedirs(log_dir,exist_ok=True)
 
 logging.basicConfig(
     filename=logs_path,
-    format='[%(asctime)s] %(names)s - %(levelname)s - %(message)s',
+    format='[%(asctime)s] %(name)s - %(levelname)s - %(message)s',
     level=logging.DEBUG
 )
