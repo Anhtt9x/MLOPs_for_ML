@@ -43,6 +43,17 @@ def load_object(file_path:str) -> object:
     except Exception as e:
         raise USvisaException(e,sys) from e
     
+
+def save_numpy_array_data(file_path:str, array:np.array):
+    try:
+        dir_path = os.path.dirname(file_path)
+        os.makedirs(dir_path,exist_ok=True)
+        with open(file_path,"wb") as file:
+            np.save(file, array)
+    except Exception as e:
+        raise USvisaException(e,sys) from e
+
+    
 def load_numpy_array_data(file_path:str) -> np.array:
     try:
         with open(file_path,'rb') as file:
