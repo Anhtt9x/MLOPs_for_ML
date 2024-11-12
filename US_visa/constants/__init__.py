@@ -22,6 +22,11 @@ PREPROCESSING_OBJECT_FILE_NAME = 'preprocessing.pkl'
 SCHEMA_FILE_PATH = os.path.join('config', 'schema.yaml')
 
 
+AWS_ACCESS_KEY_ID_ENV_KEY = 'AWS_ACCESS_KEY_ID'
+AWS_SECRET_ACCESS_KEY_ENV_KEY = 'AWS_SECRET_ACCESS_KEY'
+REGION_NAME = 'us-east-1'
+
+
 DATA_INGESTION_COLLECTION_NAME: str = 'Visa'
 DATA_INGESTION_DIR_NAME:str = 'data_ingestion'
 DATA_INGESTION_FEATURE_STORE_DIR:str = 'feature_store'
@@ -43,3 +48,7 @@ MODEL_TRAINER_TRAINED_MODEL_NAME:str = 'model.pkl'
 MODEL_TRAINER_EXPECTED_SCORE:float = 0.6
 MODEL_TRAINER_MODEL_CONFIG_FILE_NAME:str = os.path.join('config','model.yaml')
 
+
+MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE:float =0.02
+MODEL_BUCKET_NAME = 'usvisa-model'
+MODEL_PUSHER_S3_KEY = 'model-registry'
